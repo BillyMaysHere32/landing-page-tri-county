@@ -1,0 +1,96 @@
+.login-box {
+    position:absolute;
+    top: -400px;
+    right: 0;
+    transform: skewY(-5deg);
+    background-color: rgb(244, 244, 244);
+    width: 500px;
+    height: 190px;
+    margin-left:auto;
+    margin-right: 60px;
+  
+    .pwd-billing-box {
+        padding-top: 20px;
+        padding-left: 30px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+        color: black;
+        background-color: $white;
+        display: flex;
+        .left {
+            margin-right: 50px;
+            h3 {
+                font-size: xx-large;
+                color: black;
+                margin: 0;
+            }
+            p {
+                font-size: large;
+                line-height: 1.2;
+                margin: 0;
+                margin-top: 5px;
+            } 
+            .billing-link {
+              margin-bottom: 10px;
+            }
+            a {
+              color: rgb(83, 82, 82);
+              font-size: small;
+            }
+            i {
+                margin-left: -5px;
+                color: grey;
+                font-size: small;
+            }
+        }
+        .right {
+            p {
+                font-size: small;   
+                margin-bottom: 5px;
+                color: rgb(83, 82, 82);
+            }
+            i {
+                position: absolute;
+                left: 445px;
+                top: 130px;
+  
+                font-size: medium;
+            }
+            .user {
+              position: absolute;
+              top: 65px;
+            }
+            input {
+                height: 30px;
+                width: 210px;
+                background-color: #F6F6F6;
+                border: none;
+            }
+            .button{
+                margin-top: 10px;
+                background-color: $accent;
+                color: black;
+                font-size: large;
+                text-shadow: 0px .5px, .5px 0px, .5px .5px;
+                font-weight: bold;
+                text-transform: none;
+                height: 3rem;
+                width: 7rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+  
+                &:hover {
+                    background-color: $secondary;
+                    color:white;
+                }
+                &:active {
+                    background-color: $accent;
+                    color: black;
+                    @include focus();
+                }
+            } 
+        }
+    }
+  }
+  

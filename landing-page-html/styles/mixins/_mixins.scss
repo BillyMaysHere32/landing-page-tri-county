@@ -1,0 +1,17 @@
+@mixin focus {
+    border-style: solid;
+    border-color: $primary;
+    box-shadow: 0px 0px 0px 10px $focusState !important;
+}
+
+@mixin hover {
+    border-top-style: solid;
+    border-width: 3px;
+    border-top-color: $accent;
+}
+
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

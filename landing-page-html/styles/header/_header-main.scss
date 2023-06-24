@@ -1,0 +1,166 @@
+.header-main {
+    background-color: $white;
+    display: flex;
+    justify-content: center;
+    .header-inner {
+        display: flex;
+        height: 90px;
+        .logo{
+            padding-top: 7.5px;
+            .logo-image{
+                height: 75px;
+            }
+        }
+        .header-nav-main {
+            margin: 0%;
+            height: 90px;
+            display: flex;
+                .menu-item {
+                    height: 100%;
+                    padding-left: 15px;
+                    padding-right: 15px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    a.nav-top-link {
+                    color:black;
+                    font-size: larger;
+                    font-weight: normal;
+                    white-space: nowrap;
+                    }
+                    i {
+                        font-size: small;
+                    }
+                    .nav-dropdown {
+                        display: none;
+                        position: absolute;
+                        top: 120px;
+                        background-color: $tertiary;
+                        font-size: 11pt;
+                        padding: 0%;
+                        z-index: 1;
+                        .nav-dropdown-item {
+                            &:hover {
+                                background-color: $primary;
+                                a {
+                                    color: $white;
+                                }
+                            }
+                            a {
+                                min-width: 220px;
+                                padding: 10px 10px 10px 20px;
+                                display: block;
+                                color: black;
+                                &:hover {
+                                    color: $white;
+                                }
+                            }
+                        }
+                    }
+                }
+                .dropdown:hover {
+                    @include hover();
+                    .nav-dropdown {
+                        display: block;
+                    }
+                }
+                .dropdown:active {
+                    @include focus();
+                }
+//-----------------  Search Button  ---------------------------------------
+
+                .header-search {    
+                    @include center(); 
+                    .nav-dropdown {
+                        padding: 10px;
+                        margin-left: -350px;
+                        display: none;
+                        position: absolute;
+                        top: 110px;
+                        z-index: 1;
+                    } 
+                    &:hover {
+                        @include hover();
+                        .nav-dropdown {
+                            display: block;
+                        }
+                    }   
+                    &:active {
+                        @include focus();
+                        .nav-dropdown {
+                            display: block;
+                        }
+                    }
+                    form {
+                        background-color: $tertiary;
+                        padding: 10px;
+                        display: flex;
+                        justify-content: center;
+                    }
+                    input {
+                        width: 280px;
+                        padding: 15px;
+                        border: none;
+                    }
+                    input::placeholder {
+                        color: rgba(0, 0, 0, 0.682);
+                        font-size: large;
+                    }
+                    i {
+                        color:black;
+                        padding: 23px 20px 23px 20px;
+                        font-size: larger;
+                    }
+                    .submit-button {
+                        background-color: $primary;
+                        padding-left: 15px;
+                        padding-right: 15px;
+                        border: none;
+                        color: white;
+                        font-weight: bold;
+                        font-size: medium;
+                        &:hover {
+                            background-color: $secondary;
+                        }
+                    }
+                }
+//--------------------  Pay Bill Button  ------------------------------------
+
+                .header-button {
+                    background-color: $accent;
+                    transform: skewX(-10deg);
+                    a {
+                        width: 9.5rem;
+                        height: 3.25rem;
+                        font-size: medium;
+                        border: none;
+                        text-transform: none;
+                        text-shadow: 0px .5px, .5px 0px, .5px .5px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        span{
+                            transform: skewX(10deg);
+                            color:black;
+                        }
+                        &:hover {
+                            background-color: $secondary;
+                            span {
+                                color:white;
+                            }
+                        }
+                        &:active {
+                            background-color: $accent;
+                            color:black;
+                            border-width: 2px;
+                            @include focus();
+                            span{
+                                color:black;
+                            }
+                        }
+
+                    }
+                }
+        }        
+    }
+}

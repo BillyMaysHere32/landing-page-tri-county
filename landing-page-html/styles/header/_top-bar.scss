@@ -1,0 +1,36 @@
+#top-bar {
+    height: 30px;
+    background-color: $primary;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    .container {
+        margin-right: 80px;
+    }
+    .nav-box {
+        margin: 0%;
+    }
+    a {
+        color: white;
+        font-size: 11pt;
+        line-height: normal;
+        padding: 2px 5px 2px 5px;
+        margin-left: 20px;
+        &:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        &:active {
+            @include focus();
+            border-width: 2px;
+            border-color: $white;
+            text-decoration: none;
+            cursor: pointer;
+            
+        }
+    }
+}
+.nav-box li.active a {
+    background-color: $primary;
+}
+

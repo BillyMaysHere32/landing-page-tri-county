@@ -1,0 +1,35 @@
+$focusState: #f8991d66;
+$white: #FFFFFF;
+$dark: #191D1B;
+$primary: #0F824E;
+$secondary: #264A40;
+$tertiary: #E6E2DE;
+$tertiaryLight: #F8F6F4;
+$accent: #ff9500;
+
+@import './mixins/mixins';
+
+@import './header/top-bar';
+@import './header/header-main';
+@import './main/hero-nav';
+@import './main/login-box';
+
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+#wrapper {
+    font-family: "Open Sans", sans-serif;
+}
+body {
+    width: 100%;
+    margin: 0%;
+}
+ul {
+    display: flex;
+}
+li {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}
