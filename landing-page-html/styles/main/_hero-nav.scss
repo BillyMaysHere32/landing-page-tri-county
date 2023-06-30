@@ -89,4 +89,33 @@
     }
 }
 
-
+@media only screen and (max-width: 550px){
+  .content-nav-container {
+    height: 680px;
+    .section-content {
+      transform: skewY(0deg);
+      &::before {
+        transform: skewY(0.5deg);
+      }
+      &::after {
+        transform: skewY(2deg);
+      }
+      .hero-nav {
+        flex-wrap: wrap;
+        transform: translateY(72.5%);
+        justify-content: center;
+        gap: 90px;
+        .hero-nav-item {
+          transform: skewY(0deg);
+          span {
+            width: 140px;
+            display: flex;
+            white-space: wrap;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+      }
+    }
+  }
+}
